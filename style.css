@@ -1,1 +1,333 @@
+/* =========================================================
+   CONNECTNET NETWORK PROVIDER
+   CICT 017 - WEEK 3 CSS PRACTICAL
+   EXTERNAL STYLESHEET
+   ========================================================= */
 
+/* QUESTION 3:
+   Page background, headings, paragraph styling,
+   hyperlinks and consistent font.
+*/
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f8fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* QUESTION 4: GROUP SELECTOR
+   h1 and h2 use the same font family.
+*/
+h1,
+h2 {
+    font-family: Arial, sans-serif;
+}
+
+/* QUESTION 4: ELEMENT SELECTOR
+   Styles all paragraphs.
+*/
+p {
+    color: #333;
+    font-size: 18px;
+}
+
+/* QUESTION 4: CLASS SELECTOR
+   Used on multiple elements.
+*/
+.card-style {
+    border: 2px solid #004aad;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+/* Another class selector */
+.highlight-heading {
+    color: lightgreen;
+    text-align: center;
+}
+
+/* QUESTION 4: ID SELECTOR
+   Styles one unique element.
+*/
+#home {
+    border-bottom: 4px solid #ffcc00;
+}
+
+/* HEADER */
+header {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+}
+
+header h2 {
+    color: lightgreen;
+}
+
+header h3 {
+    color: orange;
+}
+
+/* QUESTION 7: NAVIGATION BAR USING FLEXBOX */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: #002f6c;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #ffcc00;
+    color: #002f6c;
+}
+
+/* GENERAL SECTIONS */
+.content-section {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.content-section h2 {
+    color: #004aad;
+}
+
+/* QUESTION 5: CSS BOX MODEL */
+.box-section {
+    border: 2px solid #004aad;
+    padding: 20px;
+    margin: 20px auto;
+    background-color: white;
+    width: 90%;
+    border-radius: 10px;
+}
+
+/* CLASS SELECTOR */
+.purple-text {
+    color: purple;
+}
+
+/* QUESTION 6: IMAGE STYLING */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.profile-image {
+    width: 220px;
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border: 4px double #004aad;
+    padding: 5px;
+    margin: 8px;
+    border-radius: 10px;
+}
+
+/* VIDEOS */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+iframe {
+    max-width: 100%;
+    border: 2px solid #004aad;
+    border-radius: 8px;
+}
+
+/* AUDIO */
+audio {
+    max-width: 100%;
+}
+
+/* FORM */
+form {
+    width: 400px;
+    max-width: 100%;
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #004aad;
+    border-radius: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #004aad;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #002f6c;
+}
+
+/* TABLE */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+th {
+    background-color: #004aad;
+    color: white;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* QUESTION 8 & 9: THREE CARDS + CSS GRID */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    min-height: 180px;
+    border-radius: 10px;
+}
+
+.card h3 {
+    color: #004aad;
+    margin-top: 0;
+}
+
+/* QUESTION 3: HYPERLINK APPEARANCE */
+a {
+    color: #004aad;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background-color: #004aad;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    color: white;
+}
+
+/* =========================================================
+   QUESTION 10: RESPONSIVE DESIGN
+   At 768px or less:
+   - Cards become one column
+   - Images fit the screen
+   - Text remains readable
+   - Navigation adjusts
+   ========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 8px auto;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .content-section {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 220px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
